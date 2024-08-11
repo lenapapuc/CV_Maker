@@ -4,6 +4,7 @@ using CV_Maker.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CV_Maker.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240811160235_FirstModels")]
+    partial class FirstModels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -148,9 +151,14 @@ namespace CV_Maker.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("СVId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("СVId");
 
                     b.ToTable("Skills");
                 });
@@ -426,21 +434,6 @@ namespace CV_Maker.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("SkillСV", b =>
-                {
-                    b.Property<Guid>("CVsId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("SkillsId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("CVsId", "SkillsId");
-
-                    b.HasIndex("SkillsId");
-
-                    b.ToTable("SkillСV");
-                });
-
             modelBuilder.Entity("Domain.Education", b =>
                 {
                     b.HasOne("Domain.Address", "Address")
@@ -491,6 +484,12 @@ namespace CV_Maker.Data.Migrations
                     b.HasOne("Domain.SkillCategory", "Category")
                         .WithMany("Skill")
                         .HasForeignKey("CategoryId");
+
+                    b.HasOne("Domain.СV", null)
+                        .WithMany("Skills")
+                        .HasForeignKey("СVId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Category");
                 });
@@ -566,21 +565,6 @@ namespace CV_Maker.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("SkillСV", b =>
-                {
-                    b.HasOne("Domain.СV", null)
-                        .WithMany()
-                        .HasForeignKey("CVsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Skill", null)
-                        .WithMany()
-                        .HasForeignKey("SkillsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Domain.Experience", b =>
                 {
                     b.Navigation("Responsiblities");
@@ -596,6 +580,8 @@ namespace CV_Maker.Data.Migrations
                     b.Navigation("Education");
 
                     b.Navigation("Experience");
+
+                    b.Navigation("Skills");
                 });
 #pragma warning restore 612, 618
         }

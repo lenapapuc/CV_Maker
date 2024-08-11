@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class СV
+    public class СV : BaseClass
     {
         public UserInfo UserInfo { get; set; }
         public List<Experience>? Experience { get; set; }

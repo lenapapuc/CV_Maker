@@ -10,5 +10,7 @@ namespace Domain
     {
         public string Name {  get; set; }
         public SkillCategory Category { get; set; }
+        public Guid CategoryId {  get; set; }
+        public List<СV>? CVs { get; set; }
     }
 }
