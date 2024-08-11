@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    internal class Address
+    public class Address
     {
+        public string AddressLine { get; set; }
+        public string AddressCity { get; set; }
+        public string AddressCountry { get; set;}
     }
 }
