@@ -2,7 +2,7 @@
 
 namespace Domain
 {
-    public class UserInfo
+    public class UserInfo : BaseClass
     {
         public string LastName { get; set; } 
         public string FirstName { get; set; }

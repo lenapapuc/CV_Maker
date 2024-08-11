@@ -83,3 +83,5 @@ C:\Users\User\source\repos\CV_Maker\CV_Maker\obj\Debug\net7.0\refint\CV_Maker.dl
 C:\Users\User\source\repos\CV_Maker\CV_Maker\obj\Debug\net7.0\CV_Maker.pdb
 C:\Users\User\source\repos\CV_Maker\CV_Maker\obj\Debug\net7.0\CV_Maker.genruntimeconfig.cache
 C:\Users\User\source\repos\CV_Maker\CV_Maker\obj\Debug\net7.0\ref\CV_Maker.dll
+C:\Users\User\source\repos\CV_Maker\CV_Maker\bin\Debug\net7.0\Domain.dll
+C:\Users\User\source\repos\CV_Maker\CV_Maker\bin\Debug\net7.0\Domain.pdb
