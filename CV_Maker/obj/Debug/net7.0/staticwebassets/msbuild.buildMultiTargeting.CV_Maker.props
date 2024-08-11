@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CV_Maker.props" />
+</Project>
