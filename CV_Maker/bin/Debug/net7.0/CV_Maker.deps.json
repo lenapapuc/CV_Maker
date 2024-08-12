@@ -9,6 +9,7 @@
       "CV_Maker/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
+          "DtoLibrary": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "7.0.12",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.12",
           "Microsoft.AspNetCore.Identity.UI": "7.0.12",
@@ -664,6 +665,11 @@
         "runtime": {
           "Domain.dll": {}
         }
+      },
+      "DtoLibrary/1.0.0": {
+        "runtime": {
+          "DtoLibrary.dll": {}
+        }
       }
     }
   },
@@ -1164,6 +1170,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DtoLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1239,6 +1239,16 @@
         "runtime": {
           "bin/placeholder/Domain.dll": {}
         }
+      },
+      "DtoLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/DtoLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DtoLibrary.dll": {}
+        }
       }
     }
   },
@@ -3421,11 +3431,17 @@
       "type": "project",
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "DtoLibrary/1.0.0": {
+      "type": "project",
+      "path": "../DtoLibrary/DtoLibrary.csproj",
+      "msbuildProject": "../DtoLibrary/DtoLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Domain >= 1.0.0",
+      "DtoLibrary >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 7.0.12",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.12",
       "Microsoft.AspNetCore.Identity.UI >= 7.0.12",
@@ -3469,6 +3485,9 @@
           "projectReferences": {
             "C:\\Users\\User\\source\\repos\\CV_Maker\\Domain\\Domain.csproj": {
               "projectPath": "C:\\Users\\User\\source\\repos\\CV_Maker\\Domain\\Domain.csproj"
+            },
+            "C:\\Users\\User\\source\\repos\\CV_Maker\\DtoLibrary\\DtoLibrary.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\CV_Maker\\DtoLibrary\\DtoLibrary.csproj"
             }
           }
         }

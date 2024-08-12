@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\CV_Maker\DtoLibrary\bin\Debug\net7.0\DtoLibrary.deps.json
+C:\Users\User\source\repos\CV_Maker\DtoLibrary\bin\Debug\net7.0\DtoLibrary.dll
+C:\Users\User\source\repos\CV_Maker\DtoLibrary\bin\Debug\net7.0\DtoLibrary.pdb
+C:\Users\User\source\repos\CV_Maker\DtoLibrary\obj\Debug\net7.0\DtoLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\CV_Maker\DtoLibrary\obj\Debug\net7.0\DtoLibrary.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\CV_Maker\DtoLibrary\obj\Debug\net7.0\DtoLibrary.AssemblyInfo.cs
+C:\Users\User\source\repos\CV_Maker\DtoLibrary\obj\Debug\net7.0\DtoLibrary.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\CV_Maker\DtoLibrary\obj\Debug\net7.0\DtoLibrary.dll
+C:\Users\User\source\repos\CV_Maker\DtoLibrary\obj\Debug\net7.0\refint\DtoLibrary.dll
+C:\Users\User\source\repos\CV_Maker\DtoLibrary\obj\Debug\net7.0\DtoLibrary.pdb
+C:\Users\User\source\repos\CV_Maker\DtoLibrary\obj\Debug\net7.0\ref\DtoLibrary.dll

@@ -1,4 +1,6 @@
 using CV_Maker.Data;
+using CV_Maker.Services.Interfaces;
+using CV_Maker.Services.ServiceClasses;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,9 +18,11 @@ namespace CV_Maker
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
+            builder.Services.AddScoped<IUserDataService, UserDataService>();
+
 
             var app = builder.Build();
 
